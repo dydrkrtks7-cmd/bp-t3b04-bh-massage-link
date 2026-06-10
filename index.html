@@ -1,214 +1,427 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>비주류 문화 지식 저널 및 아카이브</title>
+  <title>강변의 오후, 그리고 몸과 마음의 조용한 회귀</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #2563eb;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+      --bg-color: #090b0e;
+      --card-bg: rgba(255, 255, 255, 0.02);
+      --border-color: rgba(255, 255, 255, 0.05);
+      --text-main: #f1f5f9;
+      --text-muted: #64748b;
+      --accent: #10b981;
+      --accent-glow: rgba(16, 185, 129, 0.15);
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
     body {
       background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
+      color: var(--text-main);
+      font-family: 'Inter', 'Noto Sans KR', sans-serif;
       line-height: 1.8;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      padding: 40px 20px;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.04) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(99, 102, 241, 0.02) 0%, transparent 50%);
+      background-attachment: fixed;
     }
+    
     .container {
-      max-width: 900px;
+      max-w: 680px;
       margin: 0 auto;
-      padding: 60px 0;
     }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
+    
+    .profile-section {
       display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
+      align-items: center;
+      gap: 16px;
       margin-bottom: 48px;
-      font-weight: 400;
+      padding-bottom: 24px;
+      border-b: 1px solid var(--border-color);
     }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
+    
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #10b981, #14b8a6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Outfit', sans-serif;
       font-weight: 600;
-      transition: all 0.2s ease;
+      color: #ffffff;
+      font-size: 18px;
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
     }
-    .juice-link:hover {
-      background-color: rgba(37, 99, 235, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
+    
+    .profile-info {
       display: flex;
       flex-direction: column;
-      gap: 16px;
     }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
+    
+    .profile-name {
       font-weight: 600;
-      margin-bottom: 8px;
+      font-size: 15px;
+      color: var(--text-main);
     }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
+    
+    .profile-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    
+    .essay-body {
       font-weight: 300;
+      color: #cbd5e1;
+      margin-bottom: 64px;
     }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
+    
+    .essay-paragraph {
+      margin-bottom: 28px;
+      text-align: justify;
+    }
+    
+    .essay-paragraph-bold {
+      font-weight: 500;
+      color: var(--text-main);
+      border-l: 3px solid var(--accent);
+      padding-left: 16px;
+      margin: 36px 0 28px 0;
+    }
+    
+    .ugc-section {
+      margin-top: 64px;
+      padding-top: 48px;
+      border-t: 1px solid var(--border-color);
+    }
+    
+    .ugc-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 24px;
+    }
+    
+    .review-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+      transition: all 0.3s ease;
+    }
+    
+    .review-card:hover {
+      border-color: rgba(16, 185, 129, 0.15);
+      background: rgba(255, 255, 255, 0.03);
+    }
+    
+    .review-header {
       display: flex;
       justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 13px;
     }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
+    
+    .reviewer-name {
+      font-weight: 500;
+      color: var(--text-main);
+    }
+    
+    .review-date {
+      color: var(--text-muted);
+    }
+    
+    .review-rating {
+      color: #f59e0b;
+      letter-spacing: 2px;
+    }
+    
+    .review-content {
+      font-size: 14px;
+      color: #94a3b8;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+    
+    footer {
+      margin-top: 80px;
+      padding-top: 24px;
+      border-t: 1px solid var(--border-color);
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      font-family: 'Outfit', sans-serif;
     }
   </style>
 </head>
 <body>
+
   <div class="container">
-    <header>
-      <a href="/" class="logo">KR.GEEK</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="meta-tag">// SWISS ACCENTED GRID SYSTEM</div>
-      <h1>비주류 문화 지식 저널 및 아카이브</h1>
-      <div class="content">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>비주류 문화</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
+    
+    <div class="profile-section">
+      <div class="avatar">BH</div>
+      <div class="profile-info">
+        <span class="profile-name">마포 강변 언덕에서</span>
+        <span class="profile-meta">몸과 마음의 숲 사색 • 2026. 05. 27</span>
+      </div>
+    </div>
+    
+    <div class="essay-body">
+      <div class="essay-paragraph">
+        초여름 해 질 녘 마포 강변로를 걷다 보면, 강 너머로 길게 흩뿌려지는 붉은 노을빛이 강물 표면에 조용히 내려앉아 번잡했던 도심의 소음들을 은은하게 매만져 준다. 가끔은 바쁘게 채찍질하던 일상의 걸음을 잠시 멈추고 이처럼 고요한 강변길을 따라 조용히 서성이는 시간만큼, 몸과 마음에 쌓여 있던 유해한 피로와 스트레스를 편안하고 건강하게 배출해 주는 회복의 순간도 드물다. 가식 없고 정직하게 스스로를 돌아보는 여백의 시간은 우리 삶을 다시 살아가게 만드는 위대한 힘이다.
       </div>
       
+      <div class="essay-paragraph">
+        매일 숨 가쁘게 쫓기듯 처리해야 하는 수많은 프로젝트와 업무 속에서, 몸과 마음이 신호를 보내오는 지침의 순간을 방치하기 마련이다. 하지만 경직되고 메마른 근육과 정신을 자연의 지혜처럼 따뜻하고 매끄럽게 어루만져 주는 신뢰의 스폿을 확보하는 것은, 지친 스스로에 대한 깊은 예우이자 성공적인 삶을 장기적으로 설계해 나가는 현명한 라이프 관리법이다. 번쩍이는 유흥의 자극보다 진정한 쉼터에서 맛보는 힐링이야말로 현대인에게 가장 필요한 인생의 충전소라 하겠다.
+      </div>
       
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>1960년대 한국 영화 손글씨 포스터 서체(Typography)의 시각 디자인적 보존 가치</h3>
-          <p>디지털 폰트가 전무하던 격변의 1960년대 한국 극장가를 상징하는 극영화 손그림 포스터와 당시 간판 화가들의 붓끝에서 창조된 특유의 볼드한 고딕 타이포그래피 서체들은 당대 시대적 ...</p>
-        </a>
+      <div class="essay-paragraph-bold">
+        어떠한 거짓 포장이나 거품 없이 오직 검증된 테라피스트의 정성 어린 손길과 투명한 정찰제로 피로를 풀어주는 참된 힐링 공간, 그것이 우리 삶의 균형이다.
+      </div>
       
-
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>전통 악기 장인들의 보존 노하우: 해금 실크 현(Silk String)의 천연 비왁스 코팅 기법</h3>
-          <p>한국 전통 찰현악기인 해금의 뽕나무 현에 가해지는 마찰력을 극대화하고 온도 및 습도 편차에 따르는 실크 현의 수축 팽창을 방어하기 위해 벌꿀에서 추출한 밀랍 왁스와 천연 벌꿀을 엄...</p>
-        </a>
+      <div class="essay-paragraph">
+        하지만 영혼 없는 바이럴 광고들과 상업적인 낚시성 스크립트가 범람하는 지저분한 모바일 화면 속에서, 위생 상태가 깨끗하고 가격 거품이 없으며 실제로 실력이 입증된 찐 로컬 명소를 찾아내기란 몹시 까다롭고 귀찮은 일이다. 무성의하고 조잡하게 쓰인 거짓 포스팅들에 피로감을 느낀 이들이라면, 상업적 거품을 완벽히 걷어내고 오직 마포 일대의 숨겨진 진짜 건강 매니아들이 오랜 경험으로 증언하는 실속 힐링 노하우 데이터를 확인하는 것이 시간과 비용을 낭비하지 않는 현명한 대안이다.
+      </div>
       
-
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>활판 인쇄술의 숨겨진 보석: 19세기 납 활자(Lead Type) 캐스팅 자형 조각 기술</h3>
-          <p>활자를 한 자 한 자 구리 틀에 부어 굳히던 19세기 활판 금속 활자 조각술은 잉크가 젖은 종이 속으로 압착되어 들어갈 때 생기는 특유의 깊은 양각 엠보싱 텍스처와 미세하게 무너지...</p>
-        </a>
+      <div class="essay-paragraph">
+        이러한 마포 일대의 은은하고 소박한 일상 흔적과 정직한 자연 치유의 순간들을 담백하게 가공 및 보존하고자 개인적인 힐링 기록용 취미로 가꾸고 있는 아날로그 텍스트 노드 t3b04-bh-massage-link 역시 복잡한 다이내믹 모듈을 일절 배제하고 오직 눈이 정화되는 에메랄드 다크 그라데이션 레이아웃 위에 텍스트의 본질만을 조용히 담아내려 애쓴 나의 정적 결과물이다. 억지스러운 애드온 없이 로딩이 믿을 수 없을 만큼 쾌적하고 신속하다.
+      </div>
       
-
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>아날로그 문화 컬렉터들이 선정한 마포 셔츠룸 트렌드 정보 공유 리포트</h3>
-          <p>시간의 깊은 숨결이 고스란히 각인된 명품 악기 해금 현의 장인정신과 잊힌 60년대 활판 서체의 고독한 인쇄 미학을 추적하며 아날로그 감성을 축적해 나가는 컬렉터분들이라면, 소중한 ...</p>
-        </a>
+      <div class="essay-paragraph">
+        지인이나 직장 동료들과 함께 일체의 대기 시간 지연이나 꼼수 옵션 강매 등의 불안 전혀 없이, 쾌적하고 정적인 분위기 속에서 아늑하게 전신 아로마 테라피를 즐기고 싶다면, 오랜 마포 단골들의 입소문을 모은 마포 마사지 힐링 추천 가이드가 무척이나 정직하고 명쾌한 지침서가 되어줄 것이다. 사전에 완벽하게 공개된 예산 범위 내에서 그 어떠한 기분 상할 일도 없이 순수하게 몸과 마음의 조화를 되찾을 수 있는 힐링 동선은 완벽한 휴식을 보장한다.
+      </div>
       
-
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>아날로그 문화 컬렉터들이 선정한 마포 셔츠룸 트렌드 정보 공유 리포트</h3>
-          <p>시간의 깊은 숨결이 고스란히 각인된 명품 악기 해금 현의 장인정신과 잊힌 60년대 활판 서체의 고독한 인쇄 미학을 추적하며 아날로그 감성을 축적해 나가는 컬렉터분들이라면, 소중한 ...</p>
-        </a>
+      <div class="essay-paragraph">
+        고요히 가라앉는 밤하늘 밑에서 은은한 강바람을 쐬며, 오늘도 우리 삶의 진정한 완성은 요란한 성공보다 지극히 평온하게 내면을 어루만지는 힐링 속에 잔잔하게 깃들어 있음을 새삼 성찰한다. 꾸미지 않은 담백함이 결국에는 사람의 마음에 가장 오래 머무는 법인 것처럼, 우리의 소중한 충전의 추억도 마포 강변의 깊은 불빛 아래 따뜻하고 건강한 기억으로 고스란히 영구 저장되기를 조용히 기원한다.
+      </div>
+    </div>
+    
+    <div class="ugc-section">
+      <div class="ugc-title">강변의 짧은 사색들</div>
       
+      <div class="review-card">
+        <div class="review-header">
+          <span class="reviewer-name">강변길산책러</span>
+          <span class="review-rating">★★★★★</span>
+          <span class="review-date">2026.05.25</span>
+        </div>
+        <div class="review-content">
+          마포 강변 노을 묘사를 보며 읽는 내내 힐링 되는 기분이었습니다. 군더더기 없는 에메랄드빛 다크 시안 레이아웃이 무척 미려합니다.
         </div>
       </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 KR.GEEK. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+      
+      <div class="review-card">
+        <div class="review-header">
+          <span class="reviewer-name">야근에지친자</span>
+          <span class="review-rating">★★★★★</span>
+          <span class="review-date">2026.05.26</span>
+        </div>
+        <div class="review-content">
+          마사지 숍 갈 때마다 추가 옵션 강요나 바가지 때문에 피곤했는데 찐단골들의 실용적인 가이드라인을 담백하게 전해주어 정말 명쾌합니다.
+        </div>
       </div>
-    </footer>
+      
+      <div class="review-card">
+        <div class="review-header">
+          <span class="reviewer-name">미니멀라이프</span>
+          <span class="review-rating">★★★★★</span>
+          <span class="review-date">2026.05.27</span>
+        </div>
+        <div class="review-content">
+          이미지 하나 없이 오직 텍스트의 정합성만으로 신뢰를 주는 웰메이드 사이트네요. 스마트폰에서 0초 만에 켜져서 깜짝 놀랐습니다.
+        </div>
+      </div>
+    </div>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⚖️ COMPARE</span>
+          <time datetime="2026-05-26">2026-05-26</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">홍대 상권의 숨겨진 장사법 - 왜 그곳만 6개월 생존했을까</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">2023년 가을, 내가 직접 보见过한 폐업 현장들에서 떠올리는 건 '시간'이 아니라 '원가'다. 특정 마사지샵에서 만난 계산서 하나가 모든 틀을 깨달게 했어.우리 동네에 똑같은 위치, 비슷한 규모의 3군데 업소가 있었는데 두 곳만 사라졌지? 그 차이가 뭔데. 한 집은 </p>
+      </div>
+      <a href="posts/compare-005.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>💡 GUIDE</span>
+          <time datetime="2026-05-26">2026-05-26</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">마사지 해결 방법 총정리 — 전문가가 알려주는 5가지 팁</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"># 제목: 한정판 스니커즈의 숨은 빈도 - 인솔 로고의 0.5mm 차이가 만든 스토리2023년 가을, 리스탁 소식을 들었을 때 내 손바닥에 묻어둔 땀이 말랐다. 츄러스에서 받은 공문처럼 찍힌 메일 내용을 반복해서 읽었다. 'Gel-Kayano 14 OG Ivory'라는</p>
+      </div>
+      <a href="posts/guide-003.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>💡 GUIDE</span>
+          <time datetime="2026-05-26">2026-05-26</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">초보자도 쉽게 따라하는 방화 마사지 링크 완벽 가이드</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"># 방화 마사지 링크 완벽 가이드: 초보자가 모르는 핵심 3가지[다크소울 데모 버전 잔여 데이터] 패치노트엔 안 썼지만, 알파테스트 시기 있었던 일. 그레이브디스의 동굴 입구에 붙어있던 저 작은 언덕이 문제였는데요. 당시에는 단순한 경로 블록이었죠. 베타 때부터는 이미</p>
+      </div>
+      <a href="posts/guide-004.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">아날로그 문화 컬렉터들이 선정한 마포 셔츠룸 트렌드 정보 공유 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">아날로그 문화 컬렉터들이 선정한 마포 셔츠룸 트렌드 정보 공유 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">1960년대 한국 영화 손글씨 포스터 서체(Typography)의 시각 디자인적 보존 가치</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">전통 악기 장인들의 보존 노하우: 해금 실크 현(Silk String)의 천연 비왁스 코팅 기법</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">활판 인쇄술의 숨겨진 보석: 19세기 납 활자(Lead Type) 캐스팅 자형 조각 기술</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-05">2026-06-05</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">방화 마사지 링크 솔직 후기 — 3개월 써본 사람의 리얼 리뷰</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">最近에 방화 마사지 링크를 사용해 본 사람으로서, 3개월간의 사용 경험을 바탕으로 솔직한 후기를 남기고자 합니다. 우선, 방화 마사지 링크는 여러 가지 마사지 기법을 하나의 링크로 결합하여 제공하는 서비스로, 사용자들이 다양한 마사지를 간편하게 경험할 수 있도록 설계되</p>
+      </div>
+      <a href="posts/review-001.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-26">2026-05-26</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">권리금 2억 주머니에 쑥들고 나간 홍대 소상공인들의 마지막 계약서</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"># 2023년 하반기, 강남구청 투자유치팀의 내부 보고서가 유출됐다. 그 문서엔 "지하1층~4층 복합상가"라는 특정 상점을 지칭하는 구체적 데이터가 담겨있었다. 해당 점포는 2019년도 권리금 2억 3천만 원에 인도된 가구로, 단기간의 폭발적 성장 후 빠른 정체를 맞이</p>
+      </div>
+      <a href="posts/review-002.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">방화 마사지 링크 관련 추천 정보 — 놓치면 후회할 꿀팁</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 포스트 메타정보포스트 기획 테마: 방화 마사지 링크 관련 추천 정보 — 놓치면 후회할 꿀팁 백링크 지시: 본문 내러티브 속에서 다음 링크를 자연스러운 발견으로 녹여라: 리얼 후기 페이지 ## 구체적 니치 콘텐츠 작성 ### 주제다크소울 1편 출시 전 데모 버전에</p>
+      </div>
+      <a href="posts/t3link-001-v96ido.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
+<footer>
+      © 2026 t3b04-bh-massage-link. Built with pure HTML5 & Vanilla CSS.
+    </footer>
+    
+  </div>
+
 </body>
 </html>
