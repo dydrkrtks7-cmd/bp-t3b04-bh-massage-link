@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://daeheung-shirts-note.top-mapo-shirts.xyz/sitemap.xml
-Sitemap: https://daeheung-shirts-note.top-mapo-shirts.xyz/sitemap-pages.xml
+Sitemap: https://banghwa-body-tip.mapo-room-guide.xyz/sitemap.xml
+Sitemap: https://banghwa-body-tip.mapo-room-guide.xyz/sitemap-pages.xml
