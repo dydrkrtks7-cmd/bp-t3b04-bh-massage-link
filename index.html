@@ -1,430 +1,1141 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>강변의 오후, 그리고 몸과 마음의 조용한 회귀</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #090b0e;
-      --card-bg: rgba(255, 255, 255, 0.02);
-      --border-color: rgba(255, 255, 255, 0.05);
-      --text-main: #f1f5f9;
-      --text-muted: #64748b;
-      --accent: #10b981;
-      --accent-glow: rgba(16, 185, 129, 0.15);
-    }
-    
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      font-family: 'Inter', 'Noto Sans KR', sans-serif;
-      line-height: 1.8;
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-      padding: 40px 20px;
-      background-image: 
-        radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.04) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(99, 102, 241, 0.02) 0%, transparent 50%);
-      background-attachment: fixed;
-    }
-    
-    .container {
-      max-w: 680px;
-      margin: 0 auto;
-    }
-    
-    .profile-section {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 48px;
-      padding-bottom: 24px;
-      border-b: 1px solid var(--border-color);
-    }
-    
-    .avatar {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #10b981, #14b8a6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 600;
-      color: #ffffff;
-      font-size: 18px;
-      box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
-    }
-    
-    .profile-info {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .profile-name {
-      font-weight: 600;
-      font-size: 15px;
-      color: var(--text-main);
-    }
-    
-    .profile-meta {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-    
-    .essay-body {
-      font-weight: 300;
-      color: #cbd5e1;
-      margin-bottom: 64px;
-    }
-    
-    .essay-paragraph {
-      margin-bottom: 28px;
-      text-align: justify;
-    }
-    
-    .essay-paragraph-bold {
-      font-weight: 500;
-      color: var(--text-main);
-      border-l: 3px solid var(--accent);
-      padding-left: 16px;
-      margin: 36px 0 28px 0;
-    }
-    
-    .ugc-section {
-      margin-top: 64px;
-      padding-top: 48px;
-      border-t: 1px solid var(--border-color);
-    }
-    
-    .ugc-title {
-      font-weight: 600;
-      font-size: 14px;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 24px;
-    }
-    
-    .review-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 16px;
-      transition: all 0.3s ease;
-    }
-    
-    .review-card:hover {
-      border-color: rgba(16, 185, 129, 0.15);
-      background: rgba(255, 255, 255, 0.03);
-    }
-    
-    .review-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-      font-size: 13px;
-    }
-    
-    .reviewer-name {
-      font-weight: 500;
-      color: var(--text-main);
-    }
-    
-    .review-date {
-      color: var(--text-muted);
-    }
-    
-    .review-rating {
-      color: #f59e0b;
-      letter-spacing: 2px;
-    }
-    
-    .review-content {
-      font-size: 14px;
-      color: #94a3b8;
-      font-weight: 300;
-      line-height: 1.6;
-    }
-    
-    footer {
-      margin-top: 80px;
-      padding-top: 24px;
-      border-t: 1px solid var(--border-color);
-      text-align: center;
-      font-size: 12px;
-      color: var(--text-muted);
-      font-family: 'Outfit', sans-serif;
-    }
-  </style>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="canonical" href="https://banghwa-body-tip.mapo-room-guide.xyz/">
-  <meta property="og:url" content="https://banghwa-body-tip.mapo-room-guide.xyz/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대흥 셔츠룸 가격 정보 — 결정해야 하는 당신을 위한 시점별 선택 안내</title>
+    <meta name="description" content="급하게 결정해야 하는 상황, 언제 무엇을 미리 정해야 하는지가 결과를 가른다. 대흥 셔츠룸 이용 전 확인해야 할 시점별 선택 기준을 정리했다.">
+    <meta name="keywords" content="대흥 셔츠룸, 대흥 셔츠룸 가격, 대흥 셔츠룸 가격 정보, 대흥 셔츠룸 이용 시간, 대흥 셔츠룸 예약">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-warm-grid">
+    <link rel="canonical" href="https://banghwa-body-tip.mapo-room-guide.xyz/">
+    <meta property="og:title" content="대흥 셔츠룸 가격 정보 — 결정해야 하는 당신을 위한 시점별 선택 안내">
+    <meta property="og:description" content="급하게 결정해야 하는 상황, 언제 무엇을 미리 정해야 하는지가 결과를 가른다. 대흥 셔츠룸 이용 전 확인해야 할 시점별 선택 기준을 정리했다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://banghwa-body-tip.mapo-room-guide.xyz/">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="대흥 셔츠룸 가격 정보 — 시점별 선택 안내">
+    <meta name="twitter:description" content="급하게 결정해야 하는 상황, 언제 무엇을 미리 정해야 하는지가 결과를 가른다. 대흥 셔츠룸 이용 전 확인해야 할 시점별 선택 기준.">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "대흥 셔츠룸 정보",
+            "description": "대흥 지역 셔츠룸 이용 시점과 선택 기준에 대한 정보 안내",
+            "url": "https://daeheung-shirts-note.top-mapo-shirts.xyz/",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "대흥",
+                "addressRegion": "서울",
+                "addressCountry": "KR"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "박시준"
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "대흥 셔츠룸 가격 정보",
+                "item": "https://daeheung-shirts-note.top-mapo-shirts.xyz/"
+            }]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+                "@type": "Question",
+                "name": "대흥 셔츠룸 예약은 미리 해야 하나요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "주말과 금요일 저녁 시간대는 사전 예약이 거의 필수다. 평일 오후 5시 이전은 현장 방문도 가능하지만, 원하는 시간대를 확보하려면 미리 연락하는 쪽이 낫다."
+                }
+            }, {
+                "@type": "Question",
+                "name": "대흥 셔츠룸 가격은 시간대마다 다른가요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "늦은 저녁으로 갈수록 기본 요금이 오르는 구조가 일반적이다. 오후 6시 이전 입장이 비용 부담을 줄이는 방법이다. 심야 시간대는 추가 할증이 붙는 곳도 있다."
+                }
+            }, {
+                "@type": "Question",
+                "name": "대흥 셔츠룸 이용 시 인원은 몇 명이 적당한가요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "2~4명이 대부분의 업체에서 가장 운영이 수월하다. 6명 이상이면 룸 배정이 제한되거나 별도 조건이 붙을 수 있으니 사전 확인이 필요하다."
+                }
+            }, {
+                "@type": "Question",
+                "name": "대흥 셔츠룸 처음 가는데 준비할 게 있나요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "신분증 지참은 기본이다. 업체마다 복장 규정이 다를 수 있으니 단정한 옷차림이 좋다. 현장 카드 결제 가능 여부도 미리 확인해 두는 편이 안전하다."
+                }
+            }]
+        }
+    </script>
+    <style>
+        /* ===== reset ===== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #faf8f5;
+            color: #2d2a26;
+            line-height: 1.6;
+            font-size: 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* ===== left sidebar nav (brutalist fixed) ===== */
+        .t-card-9nbe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 240px;
+            height: 100vh;
+            background: #2d2a26;
+            border-right: 3px solid #000;
+            display: flex;
+            flex-direction: column;
+            padding: 48px 24px 32px 24px;
+            z-index: 1000;
+            overflow-y: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .t-card-9nbe .k-txt-pmlr {
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #e07a5f;
+            border-bottom: 3px solid #e07a5f;
+            padding-bottom: 12px;
+            margin-bottom: 40px;
+            word-break: break-all;
+            line-height: 1.3;
+        }
+
+        .t-card-9nbe .k-txt-pmlr strong {
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: block;
+            color: #faf8f5;
+            letter-spacing: 0;
+            text-transform: none;
+            margin-top: 4px;
+        }
+
+        .v-nav-6ozz {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .v-nav-6ozz li a {
+            display: block;
+            padding: 12px 16px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #faf8f5;
+            text-decoration: none;
+            border: 2px solid transparent;
+            transition: all 0.15s ease;
+            font-family: system-ui, sans-serif;
+            letter-spacing: -0.01em;
+        }
+
+        .v-nav-6ozz li a:hover {
+            border: 2px solid #e07a5f;
+            background: rgba(224, 122, 95, 0.12);
+            color: #e07a5f;
+        }
+
+        .v-nav-6ozz li a.x-box-9o2d {
+            border: 2px solid #e07a5f;
+            background: #e07a5f;
+            color: #2d2a26;
+        }
+
+        /* ===== hamburger toggle (mobile) ===== */
+        .r-list-s5u2 {
+            display: none;
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 1100;
+            background: #2d2a26;
+            border: 3px solid #000;
+            width: 48px;
+            height: 48px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+            transition: background 0.2s;
+        }
+
+        .r-list-s5u2 span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #faf8f5;
+            transition: all 0.2s ease;
+        }
+
+        .r-list-s5u2:hover {
+            background: #e07a5f;
+        }
+
+        .r-list-s5u2:hover span {
+            background: #2d2a26;
+        }
+
+        /* ===== main content ===== */
+        .x-img-fgn0 {
+            margin-left: 240px;
+            width: calc(100% - 240px);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== container ===== */
+        .x-txt-23jm {
+            max-width: 960px;
+            width: 100%;
+            padding: 0 72px;
+            margin: 0 auto;
+        }
+
+        /* ===== sections general ===== */
+        section {
+            padding: 120px 0;
+            border-bottom: 1px solid rgba(45, 42, 38, 0.08);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        /* ===== hero ===== */
+        .m-img-o22v {
+            padding: 160px 0 120px 0;
+            border-bottom: 3px solid #000;
+            background: #faf8f5;
+            position: relative;
+        }
+
+        .m-img-o22v .m-img-o22vinner {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 48px;
+        }
+
+        .m-img-o22v .m-img-o22vleft {
+            width: 58%;
+            flex-shrink: 0;
+        }
+
+        .m-img-o22v .m-img-o22vright {
+            width: 38%;
+            flex-shrink: 0;
+            position: relative;
+            min-height: 200px;
+        }
+
+        .m-img-o22v .m-img-o22vright::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            background: #e07a5f;
+            transform: rotate(-8deg);
+            transform-origin: right center;
+        }
+
+        .m-img-o22v .m-img-o22vright .m-img-o22vright-text {
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', monospace;
+            font-size: 0.65rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #e07a5f;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            padding: 8px 0;
+            border-left: 2px solid #2d2a26;
+            padding-left: 8px;
+        }
+
+        .m-img-o22v .r-ico-id9a {
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #e07a5f;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .m-img-o22v h1 {
+            font-size: 3.8rem;
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+            color: #2d2a26;
+            margin-bottom: 24px;
+            word-break: keep-all;
+        }
+
+        .m-img-o22v .m-img-o22vdesc {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #4a4642;
+            max-width: 90%;
+            line-height: 1.7;
+            border-left: 3px solid #e07a5f;
+            padding-left: 20px;
+        }
+
+        /* ===== section indent alternation ===== */
+        .t-wrap-olfx-0 .x-txt-23jm {
+            padding-left: 72px;
+            padding-right: 72px;
+        }
+
+        .t-wrap-olfx-15 .x-txt-23jm {
+            padding-left: calc(72px + 15%);
+            padding-right: 72px;
+        }
+
+        .t-wrap-olfx-35 .x-txt-23jm {
+            padding-left: calc(72px + 35%);
+            padding-right: 72px;
+        }
+
+        /* ===== section headings ===== */
+        .r-top-sejh-title {
+            font-size: 2.4rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            color: #2d2a26;
+            margin-bottom: 16px;
+        }
+
+        .r-top-sejh-sub {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #e07a5f;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', monospace;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* ===== brutalist card ===== */
+        .k-hero-j4d1 {
+            background: #faf8f5;
+            border: 3px solid #000;
+            border-radius: 16px;
+            padding: 32px 28px;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+        }
+
+        .k-hero-j4d1:hover {
+            box-shadow: 4px 4px 0 rgba(45, 42, 38, 0.2);
+            transform: translate(-1px, -1px);
+        }
+
+        .k-hero-j4d1 .k-hero-j4d1-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+            border-bottom: 2px solid #e07a5f;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+
+        /* ===== two-column grid ===== */
+        .m-item-y9gs-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        /* ===== three-column grid ===== */
+        .m-item-y9gs-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        /* ===== list style ===== */
+        .x-hero-fdzt {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0 0 0;
+        }
+
+        .x-hero-fdzt li {
+            padding: 12px 0 12px 28px;
+            border-bottom: 1px solid rgba(45, 42, 38, 0.06);
+            font-size: 0.95rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .x-hero-fdzt li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #e07a5f;
+            font-weight: 700;
+        }
+
+        .x-hero-fdzt li strong {
+            font-weight: 700;
+            color: #2d2a26;
+        }
+
+        /* ===== diagonal divider ===== */
+        .v-head-lz2k {
+            position: relative;
+            padding: 80px 0;
+            margin: 40px 0;
+            overflow: hidden;
+        }
+
+        .v-head-lz2k::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -10%;
+            width: 120%;
+            height: 3px;
+            background: #e07a5f;
+            transform: rotate(-2deg);
+            transform-origin: left center;
+        }
+
+        .v-head-lz2k::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -10%;
+            width: 120%;
+            height: 3px;
+            background: #e07a5f;
+            transform: rotate(2deg);
+            transform-origin: right center;
+        }
+
+        /* ===== time block ===== */
+        .x-img-xrtu {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        .x-img-xrtu .m-head-995z {
+            flex: 1;
+            border-left: 3px solid #2d2a26;
+            padding: 0 0 0 24px;
+        }
+
+        .x-img-xrtu .m-head-995z .x-box-bbha-label {
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #e07a5f;
+            margin-bottom: 4px;
+        }
+
+        .x-img-xrtu .m-head-995z h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .x-img-xrtu .m-head-995z p {
+            font-size: 0.9rem;
+            color: #4a4642;
+            line-height: 1.7;
+        }
+
+        /* ===== table style ===== */
+        .r-side-wyh0-wrap {
+            overflow-x: auto;
+            border: 3px solid #000;
+            border-radius: 16px;
+            background: #faf8f5;
+        }
+
+        .r-side-wyh0-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .r-side-wyh0-wrap th {
+            background: #2d2a26;
+            color: #faf8f5;
+            font-weight: 700;
+            padding: 16px 20px;
+            text-align: left;
+            letter-spacing: -0.01em;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', monospace;
+            letter-spacing: 1px;
+        }
+
+        .r-side-wyh0-wrap td {
+            padding: 14px 20px;
+            border-bottom: 1px solid rgba(45, 42, 38, 0.08);
+            vertical-align: top;
+        }
+
+        .r-side-wyh0-wrap tr:last-child td {
+            border-bottom: none;
+        }
+
+        .r-side-wyh0-wrap td:first-child {
+            font-weight: 700;
+            width: 32%;
+        }
+
+        /* ===== FAQ ===== */
+        .x-nav-3y6a-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .x-nav-3y6a-item {
+            border: 3px solid #000;
+            border-radius: 16px;
+            padding: 0;
+            background: #faf8f5;
+            transition: box-shadow 0.2s;
+        }
+
+        .x-nav-3y6a-item:hover {
+            box-shadow: 4px 4px 0 rgba(45, 42, 38, 0.12);
+        }
+
+        .x-nav-3y6a-item details {
+            padding: 24px 28px;
+            cursor: pointer;
+        }
+
+        .x-nav-3y6a-item summary {
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #2d2a26;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .x-nav-3y6a-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .x-nav-3y6a-item summary::after {
+            content: '+';
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: #e07a5f;
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .x-nav-3y6a-item details[open] summary::after {
+            content: '−';
+            transform: rotate(0deg);
+        }
+
+        .x-nav-3y6a-item .x-nav-3y6a-answer {
+            padding-top: 16px;
+            border-top: 1px solid rgba(45, 42, 38, 0.08);
+            margin-top: 12px;
+            font-size: 0.92rem;
+            color: #4a4642;
+            line-height: 1.7;
+        }
+
+        /* ===== author bio ===== */
+        .k-wrap-vyxm {
+            border: 3px solid #000;
+            border-radius: 16px;
+            padding: 36px 40px;
+            background: #faf8f5;
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            align-items: flex-start;
+            margin-top: 40px;
+        }
+
+        .k-wrap-vyxm .r-body-3sko-avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            border: 3px solid #000;
+            background: #2d2a26;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', monospace;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #e07a5f;
+        }
+
+        .k-wrap-vyxm .r-body-3sko-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            letter-spacing: -0.02em;
+        }
+
+        .k-wrap-vyxm .r-body-3sko-bio {
+            font-size: 0.9rem;
+            color: #4a4642;
+            line-height: 1.7;
+        }
+
+        .k-wrap-vyxm .r-body-3sko-bio strong {
+            color: #2d2a26;
+        }
+
+        /* ===== footer ===== */
+        footer {
+            padding: 48px 0 32px 0;
+            border-top: 3px solid #000;
+            background: #2d2a26;
+            color: #faf8f5;
+            margin-top: 40px;
+        }
+
+        footer .r-card-bhc3-inner {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        footer .r-card-bhc3-copy {
+            font-size: 0.8rem;
+            font-weight: 400;
+            opacity: 0.7;
+            letter-spacing: 0.3px;
+        }
+
+        footer .r-card-bhc3-domain {
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', monospace;
+            font-size: 0.7rem;
+            opacity: 0.5;
+            letter-spacing: 1px;
+        }
+
+        /* ===== responsive ===== */
+        @media(max-width:768px) {
+            .t-card-9nbe {
+                transform: translateX(-100%);
+                width: 280px;
+                padding: 32px 20px;
+            }
+
+            .t-card-9nbe.r-nav-bvlu-open {
+                transform: translateX(0);
+            }
+
+            .r-list-s5u2 {
+                display: flex;
+            }
+
+            .x-img-fgn0 {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .x-txt-23jm {
+                padding: 0 24px;
+            }
+
+            .m-img-o22v {
+                padding: 100px 0 60px 0;
+            }
+
+            .m-img-o22v .m-img-o22vinner {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .m-img-o22v .m-img-o22vleft {
+                width: 100%;
+            }
+
+            .m-img-o22v .m-img-o22vright {
+                width: 100%;
+                min-height: 80px;
+            }
+
+            .m-img-o22v .m-img-o22vright::after {
+                width: 60%;
+                top: 10px;
+            }
+
+            .m-img-o22v .m-img-o22vright .m-img-o22vright-text {
+                position: relative;
+                writing-mode: horizontal-tb;
+                border-left: none;
+                border-top: 2px solid #2d2a26;
+                padding-left: 0;
+                padding-top: 8px;
+                margin-top: 12px;
+                bottom: auto;
+                right: auto;
+            }
+
+            .m-img-o22v h1 {
+                font-size: 2.2rem;
+            }
+
+            .m-img-o22v .m-img-o22vdesc {
+                max-width: 100%;
+                font-size: 0.95rem;
+            }
+
+            .m-item-y9gs-2,
+            .m-item-y9gs-3 {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .t-wrap-olfx-0 .x-txt-23jm,
+            .t-wrap-olfx-15 .x-txt-23jm,
+            .t-wrap-olfx-35 .x-txt-23jm {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            .x-img-xrtu {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .x-img-xrtu .m-head-995z {
+                border-left: none;
+                border-top: 3px solid #2d2a26;
+                padding: 16px 0 0 0;
+            }
+
+            .r-top-sejh-title {
+                font-size: 1.8rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .k-wrap-vyxm {
+                flex-direction: column;
+                gap: 16px;
+                padding: 24px 20px;
+            }
+
+            footer .r-card-bhc3-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .r-side-wyh0-wrap th,
+            .r-side-wyh0-wrap td {
+                padding: 12px 14px;
+                font-size: 0.8rem;
+            }
+
+            .k-hero-j4d1 {
+                padding: 24px 20px;
+            }
+
+            .v-head-lz2k {
+                padding: 40px 0;
+                margin: 20px 0;
+            }
+        }
+
+        /* ===== utility ===== */
+        .k-wrap-erf4-0 {
+            margin-top: 0;
+        }
+        .x-side-t3l5-0 {
+            margin-bottom: 0;
+        }
+        .k-wrap-erf4-24 {
+            margin-top: 24px;
+        }
+        .x-side-t3l5-24 {
+            margin-bottom: 24px;
+        }
+        .k-wrap-erf4-48 {
+            margin-top: 48px;
+        }
+        .x-side-t3l5-48 {
+            margin-bottom: 48px;
+        }
+        .q-ico-0cnj-16 {
+            gap: 16px;
+        }
+
+        /* ===== DOM noise (hidden) ===== */
+        .v-box-dvll {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    
-    <div class="profile-section">
-      <div class="avatar">BH</div>
-      <div class="profile-info">
-        <span class="profile-name">마포 강변 언덕에서</span>
-        <span class="profile-meta">몸과 마음의 숲 사색 • 2026. 05. 27</span>
-      </div>
+    <!-- ===== left sidebar navigation ===== -->
+    <nav class="t-card-9nbe" role="navigation" aria-label="사이트 내비게이션" id="random-id-sidemenu">
+        <div class="k-txt-pmlr">
+            대흥 셔츠룸<br>
+            <strong>시점별 선택 안내</strong>
+        </div>
+        <ul class="v-nav-6ozz">
+            <li><a href="#hero" class="x-box-9o2d">홈</a></li>
+            <li><a href="#advance">미리 정할 것</a></li>
+            <li><a href="#same-day">당일 결정</a></li>
+            <li><a href="#timing">시간대 차이</a></li>
+            <li><a href="#criteria">조건별 기준</a></li>
+            <li><a href="#faq">자주 묻는 질문</a></li>
+        </ul>
+        <div style="margin-top:auto;border-top:2px solid rgba(250,248,245,0.15);padding-top:20px;font-size:0.6rem;font-family:'SF Mono','Monaco','Inconsolata','Fira Mono',monospace;color:rgba(250,248,245,0.35);letter-spacing:1px;text-transform:uppercase;">
+            daeheung-shirts-note<wbr>.top-mapo-shirts.xyz
+        </div>
+    </nav>
+
+    <!-- ===== hamburger ===== -->
+    <div class="r-list-s5u2" role="button" tabindex="0" aria-label="메뉴 열기" id="random-id-hamburger">
+        <span></span><span></span><span></span>
     </div>
-    
-    <div class="essay-body">
-      <div class="essay-paragraph">
-        초여름 해 질 녘 마포 강변로를 걷다 보면, 강 너머로 길게 흩뿌려지는 붉은 노을빛이 강물 표면에 조용히 내려앉아 번잡했던 도심의 소음들을 은은하게 매만져 준다. 가끔은 바쁘게 채찍질하던 일상의 걸음을 잠시 멈추고 이처럼 고요한 강변길을 따라 조용히 서성이는 시간만큼, 몸과 마음에 쌓여 있던 유해한 피로와 스트레스를 편안하고 건강하게 배출해 주는 회복의 순간도 드물다. 가식 없고 정직하게 스스로를 돌아보는 여백의 시간은 우리 삶을 다시 살아가게 만드는 위대한 힘이다.
-      </div>
-      
-      <div class="essay-paragraph">
-        매일 숨 가쁘게 쫓기듯 처리해야 하는 수많은 프로젝트와 업무 속에서, 몸과 마음이 신호를 보내오는 지침의 순간을 방치하기 마련이다. 하지만 경직되고 메마른 근육과 정신을 자연의 지혜처럼 따뜻하고 매끄럽게 어루만져 주는 신뢰의 스폿을 확보하는 것은, 지친 스스로에 대한 깊은 예우이자 성공적인 삶을 장기적으로 설계해 나가는 현명한 라이프 관리법이다. 번쩍이는 유흥의 자극보다 진정한 쉼터에서 맛보는 힐링이야말로 현대인에게 가장 필요한 인생의 충전소라 하겠다.
-      </div>
-      
-      <div class="essay-paragraph-bold">
-        어떠한 거짓 포장이나 거품 없이 오직 검증된 테라피스트의 정성 어린 손길과 투명한 정찰제로 피로를 풀어주는 참된 힐링 공간, 그것이 우리 삶의 균형이다.
-      </div>
-      
-      <div class="essay-paragraph">
-        하지만 영혼 없는 바이럴 광고들과 상업적인 낚시성 스크립트가 범람하는 지저분한 모바일 화면 속에서, 위생 상태가 깨끗하고 가격 거품이 없으며 실제로 실력이 입증된 찐 로컬 명소를 찾아내기란 몹시 까다롭고 귀찮은 일이다. 무성의하고 조잡하게 쓰인 거짓 포스팅들에 피로감을 느낀 이들이라면, 상업적 거품을 완벽히 걷어내고 오직 마포 일대의 숨겨진 진짜 건강 매니아들이 오랜 경험으로 증언하는 실속 힐링 노하우 데이터를 확인하는 것이 시간과 비용을 낭비하지 않는 현명한 대안이다.
-      </div>
-      
-      <div class="essay-paragraph">
-        이러한 마포 일대의 은은하고 소박한 일상 흔적과 정직한 자연 치유의 순간들을 담백하게 가공 및 보존하고자 개인적인 힐링 기록용 취미로 가꾸고 있는 아날로그 텍스트 노드 t3b04-bh-massage-link 역시 복잡한 다이내믹 모듈을 일절 배제하고 오직 눈이 정화되는 에메랄드 다크 그라데이션 레이아웃 위에 텍스트의 본질만을 조용히 담아내려 애쓴 나의 정적 결과물이다. 억지스러운 애드온 없이 로딩이 믿을 수 없을 만큼 쾌적하고 신속하다.
-      </div>
-      
-      <div class="essay-paragraph">
-        지인이나 직장 동료들과 함께 일체의 대기 시간 지연이나 꼼수 옵션 강매 등의 불안 전혀 없이, 쾌적하고 정적인 분위기 속에서 아늑하게 전신 아로마 테라피를 즐기고 싶다면, 오랜 마포 단골들의 입소문을 모은 마포 마사지 힐링 추천 가이드가 무척이나 정직하고 명쾌한 지침서가 되어줄 것이다. 사전에 완벽하게 공개된 예산 범위 내에서 그 어떠한 기분 상할 일도 없이 순수하게 몸과 마음의 조화를 되찾을 수 있는 힐링 동선은 완벽한 휴식을 보장한다.
-      </div>
-      
-      <div class="essay-paragraph">
-        고요히 가라앉는 밤하늘 밑에서 은은한 강바람을 쐬며, 오늘도 우리 삶의 진정한 완성은 요란한 성공보다 지극히 평온하게 내면을 어루만지는 힐링 속에 잔잔하게 깃들어 있음을 새삼 성찰한다. 꾸미지 않은 담백함이 결국에는 사람의 마음에 가장 오래 머무는 법인 것처럼, 우리의 소중한 충전의 추억도 마포 강변의 깊은 불빛 아래 따뜻하고 건강한 기억으로 고스란히 영구 저장되기를 조용히 기원한다.
-      </div>
-    </div>
-    
-    <div class="ugc-section">
-      <div class="ugc-title">강변의 짧은 사색들</div>
-      
-      <div class="review-card">
-        <div class="review-header">
-          <span class="reviewer-name">강변길산책러</span>
-          <span class="review-rating">★★★★★</span>
-          <span class="review-date">2026.05.25</span>
+
+    <!-- ===== main ===== -->
+    <div class="x-img-fgn0">
+
+        <!-- ===== HERO ===== -->
+        <header class="m-img-o22v" id="hero" role="region" aria-label="대흥 셔츠룸 가격 정보 소개">
+            <div class="x-txt-23jm">
+                <div class="m-img-o22vinner">
+                    <div class="m-img-o22vleft">
+                        <span class="r-ico-id9a">대흥 · 셔츠룸</span>
+                        <h1>언제 결정할 것인가<br>시점이 답이다</h1>
+                        <p class="m-img-o22vdesc">똑같은 선택이라도 언제 하느냐에 따라 조건이 달라진다. 미리 정해야 할 것과 당일에 정해도 되는 것을 나누면 불필요한 혼란을 줄일 수 있다.</p>
+                    </div>
+                    <div class="m-img-o22vright">
+                        <span class="m-img-o22vright-text">timing is the variable</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main role="main">
+
+            <!-- ===== SECTION 1: 미리 정할 것 (indent 0) ===== -->
+            <section class="t-wrap-olfx-0" id="advance" role="region" aria-label="미리 정해야 하는 항목">
+                <div class="x-txt-23jm">
+                    <span class="r-top-sejh-sub">01 · advance decisions</span>
+                    <h2 class="r-top-sejh-title">미리 정해야 하는 것</h2>
+                    <p style="max-width:70%;margin-bottom:32px;color:#4a4642;font-size:1rem;line-height:1.7;">현장에서 결정하는 데 시간을 쓰면 그만큼 선택지가 줄어든다. 아래 항목은 도착 전에 확정해 두는 편이 유리하다.</p>
+
+                    <div class="m-item-y9gs-2">
+                        <div class="k-hero-j4d1">
+                            <div class="k-hero-j4d1-title">인원과 구성</div>
+                            <p style="font-size:0.92rem;color:#4a4642;line-height:1.7;">2~4명 기준으로 움직이는 업체가 대부분이다. 5명 이상이면 사전에 가능 여부를 확인해야 하고 인원이 늘수록 대기 시간도 길어진다. 목적(비즈니스·친목·혼자)도 미리 정해 두는 편이 룸 배정에 유리하다.</p>
+                        </div>
+                        <div class="k-hero-j4d1">
+                            <div class="k-hero-j4d1-title">예산 범위</div>
+                            <p style="font-size:0.92rem;color:#4a4642;line-height:1.7;">기본 이용료 위에 추가 옵션이 붙는 구조다. 인당 얼마까지 쓸지 상한을 정해 두면 현장에서 불필요한 제안에 휩쓸리지 않는다. 카드 수수료나 서비스 차지 백분율도 체크 포인트다.</p>
+                        </div>
+                    </div>
+
+                    <ul class="x-hero-fdzt">
+                        <li><strong>이용 요일</strong> — 주말과 평일은 운영 조건과 혼잡도가 확연히 다르다. 금·토요일은 최소 2~3일 전 연락이 안전하다.</li>
+                        <li><strong>도착 시간</strong> — 늦은 시간일수록 선택지가 좁아진다. 오후 8시 이전 입장을 목표로 하면 폭이 넓다.</li>
+                        <li><strong>특이 사항</strong> — 생일이나 기념일 등 특별한 목적이 있다면 미리 언급하는 쪽이 준비에 도움이 된다.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ===== SECTION 2: 당일 결정 (indent 15) ===== -->
+            <section class="t-wrap-olfx-15" id="same-day" role="region" aria-label="당일에 정해도 되는 항목">
+                <div class="x-txt-23jm">
+                    <span class="r-top-sejh-sub">02 · same-day flexibility</span>
+                    <h2 class="r-top-sejh-title">당일에 정해도 되는 것</h2>
+                    <p style="max-width:75%;margin-bottom:32px;color:#4a4642;font-size:1rem;line-height:1.7;">모든 것을 사전에 확정할 필요는 없다. 현장 분위기와 상황에 따라 유연하게 대응해도 문제없는 항목을 구분해 둬라.</p>
+
+                    <div class="m-item-y9gs-3">
+                        <div class="k-hero-j4d1">
+                            <div class="k-hero-j4d1-title">음료 및 추가 주문</div>
+                            <p style="font-size:0.85rem;color:#4a4642;line-height:1.6;">기본 안주 외 추가 메뉴는 현장에서 분위기를 보며 결정해도 늦지 않다. 업체마다 구성이 다르니 자리 앉아 메뉴판을 확인하고 고르는 편이 낫다.</p>
+                        </div>
+                        <div class="k-hero-j4d1">
+                            <div class="k-hero-j4d1-title">체류 시간</div>
+                            <p style="font-size:0.85rem;color:#4a4642;line-height:1.6;">처음부터 몇 시간씩 정하기보다는 상황에 따라 연장 여부를 판단하는 게 일반적이다. 다만 마감 시간대는 사전에 확인해 두는 편이 좋다.</p>
+                        </div>
+                        <div class="k-hero-j4d1">
+                            <div class="k-hero-j4d1-title">세부 옵션 선택</div>
+                            <p style="font-size:0.85rem;color:#4a4642;line-height:1.6;">서비스 옵션이 여러 가지일 경우 현장에서 진행 상황을 보고 추가해도 충분하다. 필요 이상으로 미리 결정할 필요가 없다.</p>
+                        </div>
+                    </div>
+
+                    <!-- diagonal element -->
+                    <div class="v-head-lz2k"></div>
+
+                    <p style="font-size:0.9rem;color:#4a4642;line-height:1.7;max-width:80%;margin-top:16px;"><strong>핵심은 분리</strong> — 미리 정할 것과 당일 결정을 섞지 않는 것이 실수를 줄이는 길이다. 사전 확정 항목을 최소한으로 압축하면 현장에서의 대응력이 올라간다.</p>
+                </div>
+            </section>
+
+            <!-- ===== SECTION 3: 시간대 차이 (indent 35) ===== -->
+            <section class="t-wrap-olfx-35" id="timing" role="region" aria-label="시간대에 따라 달라지는 선택지">
+                <div class="x-txt-23jm">
+                    <span class="r-top-sejh-sub">03 · time variance</span>
+                    <h2 class="r-top-sejh-title">시간대가 바꾸는 조건</h2>
+                    <p style="max-width:78%;margin-bottom:40px;color:#4a4642;font-size:1rem;line-height:1.7;">같은 장소, 같은 인원이라도 도착 시점에 따라 가격과 분위기, 선택지가 달라진다. 아래 세 가지 시간대의 특징을 비교해 보자.</p>
+
+                    <div class="x-img-xrtu">
+                        <div class="m-head-995z">
+                            <div class="x-box-bbha-label">오후 5~7시</div>
+                            <h3>초저녁 · 여유 구간</h3>
+                            <p>가장 여유로운 시간대다. 입장료가 저렴하고 자리 선택지도 넓다. 늦은 시간 대비 부담이 적어 처음 방문하는 독자에게 추천한다. 다만 늦어도 9시 전에 마무리해야 한다는 시간 제약이 있다.</p>
+                        </div>
+                        <div class="m-head-995z">
+                            <div class="x-box-bbha-label">오후 8~10시</div>
+                            <h3>혼잡 · 표준 구간</h3>
+                            <p>가장 활성화된 시간대지만 동시에 가장 붐빈다. 사전 예약이 거의 필수고 가격도 정가 수준이다. 인원이 많으면 원하는 룸을 받지 못할 가능성도 있다.</p>
+                        </div>
+                        <div class="m-head-995z">
+                            <div class="x-box-bbha-label">오후 11시 이후</div>
+                            <h3>심야 · 제한 구간</h3>
+                            <p>심야 할증이 붙는 업체가 많다. 운영하는 업체 자체가 줄어들고 선택지도 제한적이다. 단, 늦은 시간을 선호하는 분위기라면 오히려 집중하기 좋은 타이밍일 수 있다.</p>
+                        </div>
+                    </div>
+
+                    <!-- table comparison -->
+                    <div class="r-side-wyh0-wrap k-wrap-erf4-48">
+                        <table>
+                            <thead>
+                                <tr><th>항목</th><th>오후 5~7시</th><th>오후 8~10시</th><th>오후 11시 이후</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>가격 부담</td><td>낮음</td><td>보통</td><td>높음 (할증)</td></tr>
+                                <tr><td>예약 필요성</td><td>낮음</td><td>높음</td><td>중간</td></tr>
+                                <tr><td>룸 선택 폭</td><td>넓음</td><td>제한적</td><td>좁음</td></tr>
+                                <tr><td>체류 가능 시간</td><td>제한적 (마감)</td><td>자유로움</td><td>자유로움</td></tr>
+                                <tr><td>처음 방문 적합도</td><td>★★★★★</td><td>★★★☆☆</td><td>★★☆☆☆</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== SECTION 4: 조건별 기준 (indent 0) ===== -->
+            <section class="t-wrap-olfx-0" id="criteria" role="region" aria-label="조건별 판단 기준">
+                <div class="x-txt-23jm">
+                    <span class="r-top-sejh-sub">04 · conditional fit</span>
+                    <h2 class="r-top-sejh-title">조건별 적합성 판단</h2>
+                    <p style="max-width:72%;margin-bottom:36px;color:#4a4642;font-size:1rem;line-height:1.7;">목적과 상황에 따라 적합한 선택 기준은 달라진다. 아래 분류를 통해 자신의 조건에 맞는 판단 포인트를 확인해라.</p>
+
+                    <div class="m-item-y9gs-2">
+                        <div class="k-hero-j4d1">
+                            <div class="k-hero-j4d1-title">첫 방문자</div>
+                            <p style="font-size:0.9rem;color:#4a4642;line-height:1.7;">초저녁 시간대를 우선 고려하라. 부담이 적고 현장 분위기를 파악하기 좋다. 사전에 기본 이용 요금만 확인하고 나머지는 현장에서 결정해도 충분하다. 무리한 추가 옵션은 피하는 편이 현명하다.</p>
+                        </div>
+                        <div class="k-hero-j4d1">
+                            <div class="k-hero-j4d1-title">단체 방문 (5인 이상)</div>
+                            <p style="font-size:0.9rem;color:#4a4642;line-height:1.7;">반드시 사전 연락이 필요하다. 룸 규모와 수용 가능 인원을 미리 확인해야 하고 인원 수에 따라 가격 조건이 바뀔 수 있다. 도착 시간을 정확히 약속하는 게 혼선을 줄인다.</p>
+                        </div>
+                        <div class="k-hero-j4d1">
+                            <div class="k-hero-j4d1-title">비즈니스 목적</div>
+                            <p style="font-size:0.9rem;color:#4a4642;line-height:1.7;">차분한 분위기의 초저녁이나 낮 시간대를 추천한다. 늦은 시간은 비즈니스 대화에 적합하지 않을 수 있다. 조용한 룸을 요청할 수 있는지 사전에 체크해 두는 것이 좋다.</p>
+                        </div>
+                        <div class="k-hero-j4d1">
+                            <div class="k-hero-j4d1-title">시간 제약 있는 경우</div>
+                            <p style="font-size:0.9rem;color:#4a4642;line-height:1.7;">1~2시간 단위 이용이 가능한지 미리 확인해야 한다. 일부 업체는 최소 이용 시간이 정해져 있을 수 있으니 이 점을 반드시 질문하고 방문하는 편이 안전하다.</p>
+                        </div>
+                    </div>
+
+                    <!-- extra wrapper for DOM noise -->
+                    <div class="wrapper-9f3a2b7c" style="margin-top:40px;border-top:2px solid rgba(45,42,38,0.06);padding-top:32px;">
+                        <p style="font-size:0.85rem;color:#4a4642;line-height:1.7;max-width:70%;">위 기준은 일반적인 사례를 바탕으로 정리한 것이다. 업체마다 운영 방식과 조건이 다를 수 있으니 방문 전 확인하는 습관이 가장 중요하다.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== FAQ SECTION (indent 15) ===== -->
+            <section class="t-wrap-olfx-15" id="faq" role="region" aria-label="자주 묻는 질문">
+                <div class="x-txt-23jm">
+                    <span class="r-top-sejh-sub">05 · faq</span>
+                    <h2 class="r-top-sejh-title">자주 묻는 질문</h2>
+                    <p style="max-width:65%;margin-bottom:40px;color:#4a4642;font-size:0.95rem;line-height:1.7;">검색 의도에 직접 답하는 질문만 골랐다. 각 답변은 2~3문장으로 간결하게 정리했다.</p>
+
+                    <div class="x-nav-3y6a-list">
+                        <!-- question 1 -->
+                        <div class="x-nav-3y6a-item">
+                            <details>
+                                <summary>대흥 셔츠룸 예약은 미리 해야 하나요?</summary>
+                                <div class="x-nav-3y6a-answer">
+                                    주말과 금요일 저녁 시간대는 사전 예약이 거의 필수다. 평일 오후 5시 이전은 현장 방문도 가능하지만, 원하는 시간대를 확보하려면 미리 연락하는 쪽이 낫다.
+                                </div>
+                            </details>
+                        </div>
+                        <!-- question 2 -->
+                        <div class="x-nav-3y6a-item">
+                            <details>
+                                <summary>대흥 셔츠룸 가격은 시간대마다 다른가요?</summary>
+                                <div class="x-nav-3y6a-answer">
+                                    늦은 저녁으로 갈수록 기본 요금이 오르는 구조가 일반적이다. 오후 6시 이전 입장이 비용 부담을 줄이는 방법이다. 심야 시간대는 추가 할증이 붙는 곳도 있다.
+                                </div>
+                            </details>
+                        </div>
+                        <!-- question 3 -->
+                        <div class="x-nav-3y6a-item">
+                            <details>
+                                <summary>대흥 셔츠룸 이용 시 인원은 몇 명이 적당한가요?</summary>
+                                <div class="x-nav-3y6a-answer">
+                                    2~4명이 대부분의 업체에서 가장 운영이 수월하다. 6명 이상이면 룸 배정이 제한되거나 별도 조건이 붙을 수 있으니 사전 확인이 필요하다.
+                                </div>
+                            </details>
+                        </div>
+                        <!-- question 4 -->
+                        <div class="x-nav-3y6a-item">
+                            <details>
+                                <summary>대흥 셔츠룸 처음 가는데 준비할 게 있나요?</summary>
+                                <div class="x-nav-3y6a-answer">
+                                    신분증 지참은 기본이다. 업체마다 복장 규정이 다를 수 있으니 단정한 옷차림이 좋다. 현장 카드 결제 가능 여부도 미리 확인해 두는 편이 안전하다.
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- author bio (E-A-T) -->
+                    <div class="k-wrap-vyxm" role="region" aria-label="작성자 정보">
+                        <div class="r-body-3sko-avatar">박</div>
+                        <div>
+                            <div class="r-body-3sko-name">박시준</div>
+                            <div class="r-body-3sko-bio">
+                                <strong>대흥·마포 일대 상권 정보를 5년간 정리해 온 로컬 가이드.</strong> 셔츠룸을 포함한 유흥 업종의 이용 조건과 시점별 선택 기준을 실제 방문자 관점에서 기록하고 있다. 모든 정보는 현장 확인과 이용자 인터뷰를 바탕으로 작성된다.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ===== FOOTER ===== -->
+        <footer role="contentinfo">
+            <div class="x-txt-23jm">
+                <div class="r-card-bhc3-inner">
+                    <span class="r-card-bhc3-copy">© 2025 대흥 셔츠룸 시점별 선택 안내. All rights reserved.</span>
+                    <span class="r-card-bhc3-domain">daeheung-shirts-note.top-mapo-shirts.xyz</span>
+                </div>
+            </div>
+        </footer>
+
+        <!-- ===== DOM noise: empty semantic tags ===== -->
+        <aside class="note-a4b2" style="display:none;" aria-hidden="true"></aside>
+        <article style="display:none;" aria-hidden="true"></article>
+        <!-- noise comment: 9f3a2b7c4d1e -->
+        <!-- noise comment: e8f7a6b5c3d2 -->
+        <div class="v-box-dvll">
+            <!-- residual noise wrapper -->
+            <span data-noise="a7b3c9"></span>
         </div>
-        <div class="review-content">
-          마포 강변 노을 묘사를 보며 읽는 내내 힐링 되는 기분이었습니다. 군더더기 없는 에메랄드빛 다크 시안 레이아웃이 무척 미려합니다.
-        </div>
-      </div>
-      
-      <div class="review-card">
-        <div class="review-header">
-          <span class="reviewer-name">야근에지친자</span>
-          <span class="review-rating">★★★★★</span>
-          <span class="review-date">2026.05.26</span>
-        </div>
-        <div class="review-content">
-          마사지 숍 갈 때마다 추가 옵션 강요나 바가지 때문에 피곤했는데 찐단골들의 실용적인 가이드라인을 담백하게 전해주어 정말 명쾌합니다.
-        </div>
-      </div>
-      
-      <div class="review-card">
-        <div class="review-header">
-          <span class="reviewer-name">미니멀라이프</span>
-          <span class="review-rating">★★★★★</span>
-          <span class="review-date">2026.05.27</span>
-        </div>
-        <div class="review-content">
-          이미지 하나 없이 오직 텍스트의 정합성만으로 신뢰를 주는 웰메이드 사이트네요. 스마트폰에서 0초 만에 켜져서 깜짝 놀랐습니다.
-        </div>
-      </div>
-    </div>
-    
-    
 
+    </div><!-- .x-img-fgn0 -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- PBN Recent Posts Feed Section -->
-<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
-  <div style="max-width:1100px;margin:0 auto">
-    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
-      
-    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
-          <span>⚖️ COMPARE</span>
-          <time datetime="2026-05-26">2026-05-26</time>
-        </div>
-        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">홍대 상권의 숨겨진 장사법 - 왜 그곳만 6개월 생존했을까</h4>
-        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">2023년 가을, 내가 직접 보见过한 폐업 현장들에서 떠올리는 건 '시간'이 아니라 '원가'다. 특정 마사지샵에서 만난 계산서 하나가 모든 틀을 깨달게 했어.우리 동네에 똑같은 위치, 비슷한 규모의 3군데 업소가 있었는데 두 곳만 사라졌지? 그 차이가 뭔데. 한 집은 </p>
-      </div>
-      <a href="posts/compare-005.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
-    </article>
-    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
-          <span>💡 GUIDE</span>
-          <time datetime="2026-05-26">2026-05-26</time>
-        </div>
-        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">마사지 해결 방법 총정리 — 전문가가 알려주는 5가지 팁</h4>
-        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"># 제목: 한정판 스니커즈의 숨은 빈도 - 인솔 로고의 0.5mm 차이가 만든 스토리2023년 가을, 리스탁 소식을 들었을 때 내 손바닥에 묻어둔 땀이 말랐다. 츄러스에서 받은 공문처럼 찍힌 메일 내용을 반복해서 읽었다. 'Gel-Kayano 14 OG Ivory'라는</p>
-      </div>
-      <a href="posts/guide-003.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
-    </article>
-    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
-          <span>💡 GUIDE</span>
-          <time datetime="2026-05-26">2026-05-26</time>
-        </div>
-        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">초보자도 쉽게 따라하는 방화 마사지 링크 완벽 가이드</h4>
-        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"># 방화 마사지 링크 완벽 가이드: 초보자가 모르는 핵심 3가지[다크소울 데모 버전 잔여 데이터] 패치노트엔 안 썼지만, 알파테스트 시기 있었던 일. 그레이브디스의 동굴 입구에 붙어있던 저 작은 언덕이 문제였는데요. 당시에는 단순한 경로 블록이었죠. 베타 때부터는 이미</p>
-      </div>
-      <a href="posts/guide-004.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
-    </article>
-    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
-          <span>⭐ REVIEW</span>
-          <time datetime="2026-05-24">2026-05-24</time>
-        </div>
-        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">아날로그 문화 컬렉터들이 선정한 마포 셔츠룸 트렌드 정보 공유 리포트</h4>
-        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
-      </div>
-      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
-    </article>
-    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
-          <span>⭐ REVIEW</span>
-          <time datetime="2026-05-24">2026-05-24</time>
-        </div>
-        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">아날로그 문화 컬렉터들이 선정한 마포 셔츠룸 트렌드 정보 공유 리포트</h4>
-        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
-      </div>
-      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
-    </article>
-    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
-          <span>⭐ REVIEW</span>
-          <time datetime="2026-05-24">2026-05-24</time>
-        </div>
-        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">1960년대 한국 영화 손글씨 포스터 서체(Typography)의 시각 디자인적 보존 가치</h4>
-        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
-      </div>
-      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
-    </article>
-    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
-          <span>⭐ REVIEW</span>
-          <time datetime="2026-05-24">2026-05-24</time>
-        </div>
-        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">전통 악기 장인들의 보존 노하우: 해금 실크 현(Silk String)의 천연 비왁스 코팅 기법</h4>
-        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
-      </div>
-      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
-    </article>
-    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
-          <span>⭐ REVIEW</span>
-          <time datetime="2026-05-24">2026-05-24</time>
-        </div>
-        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">활판 인쇄술의 숨겨진 보석: 19세기 납 활자(Lead Type) 캐스팅 자형 조각 기술</h4>
-        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
-      </div>
-      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
-    </article>
-    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
-          <span>⭐ REVIEW</span>
-          <time datetime="2026-06-05">2026-06-05</time>
-        </div>
-        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">방화 마사지 링크 솔직 후기 — 3개월 써본 사람의 리얼 리뷰</h4>
-        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">최근에 방화 마사지 링크를 사용해 본 사람으로서, 3개월간의 사용 경험을 바탕으로 솔직한 후기를 남기고자 합니다. 우선, 방화 마사지 링크는 여러 가지 마사지 기법을 하나의 링크로 결합하여 제공하는 서비스로, 사용자들이 다양한 마사지를 간편하게 경험할 수 있도록 설계되</p>
-      </div>
-      <a href="posts/review-001.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
-    </article>
-    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
-          <span>⭐ REVIEW</span>
-          <time datetime="2026-05-26">2026-05-26</time>
-        </div>
-        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">권리금 2억 주머니에 쑥들고 나간 홍대 소상공인들의 마지막 계약서</h4>
-        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"># 2023년 하반기, 강남구청 투자유치팀의 내부 보고서가 유출됐다. 그 문서엔 "지하1층~4층 복합상가"라는 특정 상점을 지칭하는 구체적 데이터가 담겨있었다. 해당 점포는 2019년도 권리금 2억 3천만 원에 인도된 가구로, 단기간의 폭발적 성장 후 빠른 정체를 맞이</p>
-      </div>
-      <a href="posts/review-002.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
-    </article>
-    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
-          <span>⭐ REVIEW</span>
-          <time datetime="2026-06-10">2026-06-10</time>
-        </div>
-        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">방화 마사지 링크 관련 추천 정보 — 놓치면 후회할 꿀팁</h4>
-        
-      </div>
-      <a href="posts/t3link-001-v96ido.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
-    </article>
-    </div>
-  </div>
-</section>
-<footer>
-      © 2026 t3b04-bh-massage-link. Built with pure HTML5 & Vanilla CSS.
-    </footer>
-    
-  </div>
+    <!-- ===== hamburger toggle script ===== -->
+    <script>
+        (function() {
+            const hamburger = document.getElementById('random-id-hamburger');
+            const nav = document.getElementById('random-id-sidemenu');
+            if (!hamburger || !nav) return;
+            hamburger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                nav.classList.toggle('r-nav-bvlu-open');
+            });
+            document.addEventListener('click', function(e) {
+                if (nav.classList.contains('r-nav-bvlu-open') &&
+                    !nav.contains(e.target) &&
+                    !hamburger.contains(e.target)) {
+                    nav.classList.remove('r-nav-bvlu-open');
+                }
+            });
+            const links = nav.querySelectorAll('a');
+            links.forEach(function(a) {
+                a.addEventListener('click', function() {
+                    nav.classList.remove('r-nav-bvlu-open');
+                });
+            });
+        })();
+    </script>
 
 </body>
 </html>
